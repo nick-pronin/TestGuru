@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+nick = User.create(name: 'Nick', age: 30)
+
 #Categories
 
 history = Category.create(title: 'History')
@@ -13,11 +15,11 @@ games = Category.create(title: 'Games')
 
 #Tests
 
-ancient_rome = Test.create(title: 'Ancien Rome', level: 1, category_id: history.id)
-ww2 = Test.create(title: 'WWII', level: 2, category_id: history.id)
+ancient_rome = Test.create(title: 'Ancien Rome', level: 1, category_id: history.id, author_id: nick.id)
+ww2 = Test.create(title: 'WWII', level: 2, category_id: history.id, author_id: nick.id)
 
-wow = Test.create(title: 'World of Warcraft', level: 1, category_id: games.id)
-starcraft2 = Test.create(title: 'StarCraft2', level: 2, category_id: games.id)
+wow = Test.create(title: 'World of Warcraft', level: 1, category_id: games.id, author_id: nick.id)
+starcraft2 = Test.create(title: 'StarCraft2', level: 2, category_id: games.id, author_id: nick.id)
 
 #Questions
 
