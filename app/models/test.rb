@@ -5,6 +5,9 @@ class Test < ApplicationRecord
   has_many :users, through: :results
   has_many :questions, dependent: :destroy
 
+  validates :title, presence: true, uniqueness: { scope: :level, message: "A test with the same name and difficulty level already exists" }
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
   scope :beginner, -> { where(level: 0..1) }
   scope :middle, -> { where(level: 2..4) }
   scope :professor, -> { where(level: 5..Float::INFINITY) }
