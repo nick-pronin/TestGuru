@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_27_125408) do
+ActiveRecord::Schema.define(version: 2021_07_28_144230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2021_07_27_125408) do
     t.string "title", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["title"], name: "index_categories_on_title", unique: true
   end
 
   create_table "questions", force: :cascade do |t|
@@ -57,6 +58,7 @@ ActiveRecord::Schema.define(version: 2021_07_27_125408) do
     t.bigint "author_id"
     t.index ["author_id"], name: "index_tests_on_author_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
+    t.index ["title"], name: "index_tests_on_title", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -64,6 +66,7 @@ ActiveRecord::Schema.define(version: 2021_07_27_125408) do
     t.string "email", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "answers", "questions"

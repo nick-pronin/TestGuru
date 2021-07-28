@@ -12,5 +12,9 @@ class Test < ApplicationRecord
   scope :middle, -> { where(level: 2..4) }
   scope :professor, -> { where(level: 5..Float::INFINITY) }
 
-  scope :sort_by_category, -> (category) { joins(:category).where(categories: { title: category }).order(title: :desc).pluck(:title) }
+  scope :sort_by_category, -> (category) { joins(:category).where(categories: { title: category }).order(title: :desc) }
+
+  def self.tests_by_category(category)
+    sort_by_category.pluck(:title)
+  end
 end
