@@ -23,8 +23,6 @@ class QuestionsController < ApplicationController
   def edit; end
 
   def update
-    @question = Question.find(params[:id])
-
     if @question.update(question_params)
       redirect_to test_path(@question.test)
     else
@@ -33,7 +31,7 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-    @question.destroy!
+    @question.destroy
 
     redirect_to test_path(@question.test)
   end
