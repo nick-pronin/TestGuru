@@ -1,0 +1,15 @@
+<h1><%= @test.title %> Test</h1>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th colspan="3">Actions</th>
+  </tr>
+  <%= render @test.questions %>
+</table>
+
+<p>
+  <%= link_to 'Create Question', new_test_question_path(@test) %>
+  <%= back_to_tests %> |
+  <%= link_to 'Delete Test', test_path, method: :delete, data: {confirm: 'Are you sure?'} %>
+</p>
