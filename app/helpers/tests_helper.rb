@@ -1,6 +1,5 @@
 module TestsHelper
 
-  # TEST_LEVELS = { 0 => :beginner, 1 => :beginner, 2 => :middle, 3 => :middle, 4 => :middle }.freeze
   TEST_LEVELS = { 0..1 => :beginner, 2..4 => :middle }.freeze
 
   def back_to_tests
