@@ -1,8 +1,8 @@
 class Test < ApplicationRecord
   belongs_to :category
   belongs_to :author, class_name: 'User', foreign_key: :user_id, optional: true
-  has_many :results, dependent: :destroy
-  has_many :users, through: :results
+  has_many :test_passages, dependent: :destroy
+  has_many :users, through: :test_passages
   has_many :questions, dependent: :destroy
 
   validates :title, presence: true, uniqueness: { scope: :level, message: "A test with the same name and difficulty level already exists" }
@@ -16,5 +16,9 @@ class Test < ApplicationRecord
 
   def self.tests_by_category(category)
     sort_by_category.pluck(:title)
+  end
+
+  def total_questions
+    self.questions.count
   end
 end
