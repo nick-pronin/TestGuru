@@ -1,0 +1,14 @@
+<% if logged_in? %>
+<p>
+  <h1>Welcome to the <%= link_to 'TestGuru', root_path %> portal, <%= current_user.name %>! Choose test</h1>
+
+  <p><%= link_to 'Log Out', logout_path, method: :delete %></p>
+</p>
+  <% else %>
+  <p>
+    <h1>TestGuru portal welcomes you</h1>
+    <%= link_to 'Log In', login_path %>
+    <%= link_to 'Sign Up', signup_path %>
+  </p>
+
+<% end %>
