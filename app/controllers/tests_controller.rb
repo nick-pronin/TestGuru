@@ -2,7 +2,6 @@ class TestsController < ApplicationController
 
   before_action :authenticate_user!
   before_action :find_test, only: %i[ show edit update destroy start]
-  before_action :find_user, only: :start
 
   def index
     @tests = Test.all
@@ -49,10 +48,6 @@ class TestsController < ApplicationController
 
   def find_test
     @test = Test.find(params[:id])
-  end
-
-  def find_user
-    @user = User.first
   end
 
   def test_params
