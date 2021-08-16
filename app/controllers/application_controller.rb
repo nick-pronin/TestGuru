@@ -5,7 +5,11 @@ class ApplicationController < ActionController::Base
   protected
 
   def after_login
-    flash[:notice] = "Welcome back, #{current_user.name}!"
+    flash[:notice] = "Welcome, #{current_user.name}!" 
+  end
+
+  def after_sign_in_path_for(user)
+    user.admin? ? admin_tests_path : root_path
   end
 
   def configure_permitted_parameters

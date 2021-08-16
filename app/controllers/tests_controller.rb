@@ -1,13 +1,9 @@
 class TestsController < ApplicationController
-  before_action :authenticate_user!, only: :start
+  before_action :authenticate_user!
   before_action :find_test, only: :start
 
   def index
     @tests = Test.all
-
-    if current_user.try(:admin?)
-      redirect_to admin_tests_path
-    end
   end
 
   def start

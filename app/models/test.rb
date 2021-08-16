@@ -1,6 +1,6 @@
 class Test < ApplicationRecord
   belongs_to :category
-  belongs_to :author, class_name: 'User', foreign_key: :user_id, optional: true
+  belongs_to :author, class_name: 'User'
   has_many :test_passages, dependent: :destroy
   has_many :users, through: :test_passages
   has_many :questions, dependent: :destroy
@@ -16,10 +16,6 @@ class Test < ApplicationRecord
 
   def self.tests_by_category(category)
     sort_by_category.pluck(:title)
-  end
-
-  def author
-    author = User.find_by(id: self.author_id)
   end
 
   def total_questions
