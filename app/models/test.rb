@@ -18,6 +18,10 @@ class Test < ApplicationRecord
     sort_by_category.pluck(:title)
   end
 
+  def author
+    author = User.find_by(id: self.author_id)
+  end
+
   def total_questions
     self.questions.count
   end

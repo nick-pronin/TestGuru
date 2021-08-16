@@ -1,7 +1,0 @@
-<h1>Question № <%= @question.test.questions.index(@question) + 1 %> for test <%= @question.test.title %></h1>
-
-<p><%= @question.body %></p>
-    <%= link_to 'Delete', question_path, method: :delete, data: {confirm: "Are you sure?"} %> |
-</div>
-
-<%= test_nav(@question) %>
