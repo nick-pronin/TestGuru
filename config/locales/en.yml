@@ -31,3 +31,19 @@
 
 en:
   hello: "Hello world"
+
+  tests:
+    index:
+      header: 'List of tests'
+      title: 'Title'
+      category: 'Category'
+      level: 'Level'
+      qcount: 'Number of Questions'
+    test:
+      start: "Start"
+
+  helpers:
+    test:
+      beginner: 'Beginner'
+      middle: 'Middle'
+      professor: 'Professor'
