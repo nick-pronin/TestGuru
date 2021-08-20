@@ -32,18 +32,80 @@
 en:
   hello: "Hello world"
 
+  admin:
+    tests:
+      index:
+        header: 'Test list'
+        title: 'Title'
+        category: 'Category'
+        level: 'Level'
+        qcount: 'Number of questions'
+        author: 'Test author'
+        actions: 'Actions'
+        edit: 'Edit'
+      test:
+        edit: 'Edit'
+        show: 'Show'
+        delete: 'Delete'
+        sure?: 'Are you sure?'
+      show:
+        test: "Test %{title}"
+        new_question: 'Create Question'
+        delete_test: 'Delete Test'
+      edit:
+        edit_test: 'Editing a test %{test}'
+      create:
+        notice: 'Test has been created!'
+      update:
+        notice: 'Test has been updated!'
+      destroy:
+        notice: 'Test has been deleted!'
+
   tests:
     index:
-      header: 'List of tests'
+      header: 'Test list'
       title: 'Title'
       category: 'Category'
       level: 'Level'
-      qcount: 'Number of Questions'
+      qcount: 'Number of questions'
     test:
       start: "Start"
 
+  test_passages:
+    show:
+      header: "You are passing the test %{test_title}"
+      number: "Question %{question_number} of %{questions_count}"
+      next: 'Next question'
+    result:
+      completed: 'Test% {test} completed!'
+      correct_answers: 'Correct answers: %{score}'
+
   helpers:
+    submit:
+      test:
+        create: "Create"
+        update: "Update"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+      question:
+        body: "Question"
+      answer:
+        body: "Answer"
+        correct: "Correct?"
+    select:
+      prompt: "Select category"
     test:
       beginner: 'Beginner'
       middle: 'Middle'
       professor: 'Professor'
+      back: 'Back'
+    test_passages:
+      total_questions: 'Total questions: %{count}'
+      positive_result: 'Congratulations on successfully completing the test! Your result: %{result}'
+      negative_result: 'Sorry, you haven't passed the test. Your result: %{result}%'
+    admin:
+      tests:
+        new: 'New Test'

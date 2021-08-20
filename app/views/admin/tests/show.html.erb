@@ -1,4 +1,4 @@
-<h1><%= @test.title %> Test</h1>
+<h1><%= t('.test', title: @test.title) %></h1>
 
 <table>
   <tr>
@@ -9,8 +9,8 @@
 </table>
 
 <p>
-  <%= link_to 'Create Question', new_admin_test_question_path(@test) %> | 
-  <%= link_to 'Delete Test', admin_test_path(@test), method: :delete, data: {confirm: 'Are you sure?'} %>
+  <%= link_to t('.new_question'), new_admin_test_question_path(@test) %> |
+  <%= link_to t('.delete_test'), admin_test_path(@test), method: :delete, data: {confirm: 'Are you sure?'} %>
 </p>
 
 <p><%= link_to 'Back', admin_tests_path %></p>

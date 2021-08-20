@@ -48,6 +48,10 @@ ru:
         show: 'Открыть'
         delete: 'Удалить'
         sure?: 'Вы уверены?'
+      show:
+        test: "Тест %{title}"
+        new_question: 'Создать вопрос'
+        delete_test: 'Удалить тест'
       edit:
         edit_test: 'Редактирование теста %{test}'
       create:
