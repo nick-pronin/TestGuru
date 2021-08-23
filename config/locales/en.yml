@@ -105,7 +105,7 @@ en:
     test_passages:
       total_questions: 'Total questions: %{count}'
       positive_result: 'Congratulations on successfully completing the test! Your result: %{result}'
-      negative_result: 'Sorry, you haven't passed the test. Your result: %{result}%'
+      negative_result: "Sorry, you haven't passed the test. Your result: %{result}%"
     admin:
       tests:
         new: 'New Test'
