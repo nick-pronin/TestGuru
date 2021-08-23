@@ -105,6 +105,8 @@ ru:
       middle: 'Средний'
       professor: 'Профессор'
       back: 'Назад'
+      create: "Создание теста"
+      edit: "Редактирование теста"
     test_passages:
       total_questions: 'Всего вопросов: %{count}'
       positive_result: 'Поздравляем с успешным завершением теста! Ваш результат: %{result}%'
@@ -112,7 +114,6 @@ ru:
     admin:
       tests:
         new: 'Новый тест'
-
   shared:
     errors:
       header:

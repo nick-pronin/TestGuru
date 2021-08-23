@@ -1,6 +1,19 @@
 ru:
   activerecord:
+    attributes:
+      test:
+        category: "Категория"
+        title: "Название"
+        level: "Уровень"
     errors:
       messages:
         blank: 'Не может быть пустым'
         max_answers: 'Допускается %{max} ответа максимум'
+        title: "Название"
+      models:
+        test:
+          attributes:
+            category:
+              required: "не выбрана"
+            level:
+              greater_than_or_equal_to: "должен быть равнен или быть больше 0"

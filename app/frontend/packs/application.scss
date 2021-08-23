@@ -17,30 +17,35 @@ body {
   border-radius: 25px;
 }
 
-.box h1 {
+.box h1, h2, ul, li {
   color: white;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-.box input[type = "email"], .box input[type = "password"], .box input[type = "text"] {
+.box input[type = "email"], .box input[type = "password"], .box input[type = "text"], .box input[type = "number"], .box select {
   border: 0;
   background: none;
   display: block;
+  width: 280px;
   margin: 20px auto;
   text-align: center;
   border: 2px solid #3498db;
-  padding: 5px 1px;
-  width: 280px;
+  padding: 5px 2px;
   outline: none;
   color: white;
   border-radius: 24px;
   transition: 0.25s;
 }
 
-.box input[type = "email"]:focus, .box input[type = "password"]:focus, .box input[type = "text"]:focus {
+.box input[type = "email"]:focus, .box input[type = "password"]:focus, .box input[type = "text"]:focus, .box input[type = "number"] {
   width: 300px;
   border-color: #2ecc71;
+}
+
+option{
+  color:#fff;
+  background:#191919;
 }
 
 .box input[type = "submit"] {

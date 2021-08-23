@@ -9,4 +9,9 @@ module TestsHelper
   def test_level(test)
     TEST_LEVELS.select { |test_level| test_level === test.level }.values.first || I18n.t('helpers.test.professor')
   end
+
+  def tests_header(test)
+    action = test.new_record? ? t('helpers.test.create') : t('helpers.test.edit')
+    "#{action}"
+  end
 end

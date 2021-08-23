@@ -104,6 +104,8 @@ en:
       middle: 'Middle'
       professor: 'Professor'
       back: 'Back'
+      create: "Create test"
+      edit: "Edit test"
     test_passages:
       total_questions: 'Total questions: %{count}'
       positive_result: 'Congratulations on successfully completing the test! Your result: %{result}'
