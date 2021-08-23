@@ -6,17 +6,17 @@
 
     <div class="field">
       <!-- <%= f.label :name %><br /> -->
-      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Name" %>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: t('.name') %>
     </div>
 
     <div class="field">
       <!-- <%= f.label :last_name %><br /> -->
-      <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "Surname" %>
+      <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: t('.surname') %>
     </div>
 
     <div class="field">
       <!-- <%= f.label :email %><br /> -->
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: t('.email') %>
     </div>
 
     <div class="field">
@@ -24,16 +24,16 @@
       <% if @minimum_password_length %>
       <!-- <em>(<%= @minimum_password_length %> characters minimum)</em> -->
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password (#{@minimum_password_length} characters minimum)" %>
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: t('.password', minimum: @minimum_password_length) %>
     </div>
 
     <div class="field">
       <!-- <%= f.label :password_confirmation %><br /> -->
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: t('.confirm_password') %>
     </div>
 
     <div class="actions">
-      <%= f.submit "Sign up" %>
+      <%= f.submit t('.sign_up_submit') %>
     </div>
   <% end %>
 

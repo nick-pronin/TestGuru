@@ -31,6 +31,8 @@
 
 en:
   hello: "Hello world"
+  greetings: "Welcome! Please Log In"
+  greetings_signed_in: "Welcome to the portal "
 
   admin:
     tests:
@@ -109,3 +111,9 @@ en:
     admin:
       tests:
         new: 'New Test'
+
+  shared:
+    header:
+      user_mode: "User Mode"
+      admin_mode: "Admin Mode"
+      log_out: "Log Out"

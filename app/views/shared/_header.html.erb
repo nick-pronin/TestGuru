@@ -1,34 +1,38 @@
 <% if user_signed_in? %>
-<p>
-  <h1>Welcome to the <%= link_to 'TestGuru', root_path %> portal, <%= current_user.name %>! Choose test</h1>
-
-  <p><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></p>
-</p>
+    <h1><%= t('greetings_signed_in') %><%= link_to t('testguru'), root_path %>, <%= current_user.name %></h1>
   <% else %>
-
+    <h1><%= t('greetings') %></h1>
 <% end %>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar w/ text</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-      </ul>
+
+<nav class="navbar navbar-dark bg-dark mb-3">
+  <div class="navbar-text">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <% if user_signed_in? %>
+        <button type="button" class="btn btn-dark btn-sm"><%= link_to t('.log_out'), destroy_user_session_path, method: :delete %></button>
+      <% end %>
     </div>
-    <div class="d-grid gap-2 d-md-block">
-      <%= link_to 'RU', {lang: :ru}, class: "btn btn-outline-secondary btn-sm lang" %>
-      <%= link_to 'EN', {lang: :en}, class: "btn btn-outline-secondary btn-sm lang" %>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <% if I18n.locale == I18n.default_locale %>
+        <label class="btn btn-dark btn-sm">
+          <%= link_to 'RU', {lang: :ru} %>
+        </label>
+      <% else %>
+        <label class="btn btn-dark btn-sm">
+          <%= link_to 'EN', {lang: :en} %>
+        </label>
+      <% end %>
+      <% if user_signed_in? %>
+        <% if current_user.admin? %>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-dark btn-sm">
+              <%= link_to t('.user_mode'), tests_path %>
+            </label>
+            <label class="btn btn-dark btn-sm">
+              <%= link_to t('.admin_mode'), admin_tests_path %>
+            </label>
+          </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </nav>
