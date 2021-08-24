@@ -1,8 +1,27 @@
 @import "~bootstrap/scss/bootstrap";
 
-body {
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+}
+
+.content {
+  padding-bottom: 90px;
+}
+.footer {
+  justify-content: space-evenly;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background-color: blue;
 }
 
 .box {
@@ -77,9 +96,18 @@ option{
 }
 
 h1 {
+  margin: 0;
   text-align: center;
+  background-color: bg-dark;
+}
+
+h2 {
+  margin: 0;
+  text-align: center;
+  color: bg-dark;
 }
 
 a {
+  color: white;
   text-decoration: none;
 }

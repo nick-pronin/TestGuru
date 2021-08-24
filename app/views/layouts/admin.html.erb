@@ -9,10 +9,14 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= render 'shared/header' %>
-    <%= yield %>
-    <%= render 'shared/footer' %>
+    <div class="wrapper">
+      <div class="content">
+        <%= render 'shared/header' %>
+        <%= render 'shared/flash' %>
+        <%= yield %>
+      </div>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>

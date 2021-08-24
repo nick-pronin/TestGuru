@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def after_login
-    flash[:notice] = "Welcome, #{current_user.name}!"
+    flash[:success] = "Welcome, #{current_user.name}!"
   end
 
   def after_sign_in_path_for(user)
