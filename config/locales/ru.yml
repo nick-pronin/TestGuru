@@ -82,6 +82,9 @@ ru:
     result:
       completed: 'Тест %{test} завершен!'
       correct_answers: 'Правильных ответов: %{score}'
+    gist:
+      success: "Gist успешно создан"
+      failure: "Во время сохранения Gist произошла ошибка"
 
   helpers:
     submit:

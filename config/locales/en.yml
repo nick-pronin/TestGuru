@@ -79,8 +79,11 @@ en:
       number: "Question %{question_number} of %{questions_count}"
       next: 'Next question'
     result:
-      completed: 'Test% {test} completed!'
+      completed: 'Test %{test} completed!'
       correct_answers: 'Correct answers: %{score}'
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving gist"
 
   helpers:
     submit:
