@@ -4,17 +4,14 @@
       <%= render 'shared/errors', resource: @test %>
 
       <div class="field">
-        <!-- <%= form.label :title %><br> -->
         <%= form.text_field :title, id: :test_title, placeholder: "Title" %>
       </div>
 
       <div class="field">
-        <!-- <%= form.label :level %><br> -->
         <%= form.text_field :level, in: 0..5, step: 1, id: :test_level, placeholder: "Level" %>
       </div>
 
       <div class="field">
-        <!-- <%= form.label :category_id %><br> -->
         <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
       </div>
 

@@ -1,0 +1,12 @@
+<h1><%= t('.list') %></h1>
+
+<table class="table table-dark table-striped text-center">
+  <thead>
+  <tr>
+    <th><%= t('.question') %></th>
+    <th><%= t('.link') %></th>
+    <th><%= t('.email') %></th>
+  </tr>
+  <thead>
+  <%= render @gists %>
+</table>

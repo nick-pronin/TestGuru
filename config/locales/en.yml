@@ -35,6 +35,12 @@ en:
   greetings_signed_in: "Welcome to the portal "
 
   admin:
+    gists:
+      index:
+        list: "List of Gists"
+        question: "Question"
+        link: "Link"
+        email: "E-mail"
     tests:
       index:
         header: 'Test list'
@@ -122,3 +128,7 @@ en:
       user_mode: "User Mode"
       admin_mode: "Admin Mode"
       log_out: "Log Out"
+
+  services:
+    gist_question_service:
+      gist_description: "Question of %{title} Test"

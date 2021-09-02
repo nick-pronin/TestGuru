@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :authorship, class_name: "Test", foreign_key: "author_id", dependent: :nullify
   validates :name, :last_name, presence: true
+  has_many :gists, dependent: :destroy
 
   def test_by_level(level)
     tests.where(level: level)
