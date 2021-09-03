@@ -14,8 +14,7 @@ class GistQuestionService
 
   def success?
     response = @client.last_response
-    return true if response.status == 201
-    # @gist_answer[:html_url].present?
+    response.status == 201
   end
 
   def default_client
