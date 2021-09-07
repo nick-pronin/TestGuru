@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale
-  after_action :after_login, only: :create
+  # after_action :after_login, only: :create
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def default_url_options
@@ -9,9 +9,9 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def after_login
-    flash[:success] = "Welcome, #{current_user.name}!"
-  end
+  # def after_login
+  #   flash[:success] = "Welcome, #{current_user.name}!"
+  # end
 
   def after_sign_in_path_for(user)
     user.admin? ? admin_tests_path : root_path

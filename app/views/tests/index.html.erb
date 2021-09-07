@@ -1,12 +1,16 @@
 <h1><%= t('.header') %></h1>
 
-<table class="table table-dark table-striped text-center">
+<table class="table">
   <tr>
-    <th><%= t('.title') %></th>
-    <th><%= t('.category') %></th>
-    <th><%= t('.level') %></th>
-    <th><%= t('.qcount')%></th>
-    <th></th>
+    <th class="sort-by-title pointer" scope="col">
+      <%= t('.title') %>
+      <%= octicon 'arrow-up', class: 'text-success hide' %>
+      <%= octicon 'arrow-down', class: 'text-success hide' %>
+    </th>
+    <th scope="col"><%= t('.category') %></th>
+    <th scope="col"><%= t('.level') %></th>
+    <th scope="col"><%= t('.qcount')%></th>
+    <th scope="col"></th>
   </tr>
   <%= render @tests %>
 </table>

@@ -10,7 +10,11 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import {} from 'jquery-ujs'
-import '../js/bootstrap_js_files.js'  
+import '../js/bootstrap_js_files.js'
+import '../js/utilites/sorting.js'
+import '../js/utilites/password_comparison.js'
+import '../css/icons'
+
 
 Rails.start()
 Turbolinks.start()

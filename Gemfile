@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 
 # gem 'faraday'
 gem 'octokit', '~> 4.0'
+gem 'octicons_helper'
 gem 'dotenv-rails'
 
 gem 'devise', '~> 4.0'
