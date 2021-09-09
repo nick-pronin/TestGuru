@@ -11,17 +11,15 @@ document.addEventListener('turbolinks:load', function () {
 })
 
 function password_comparison() {
-  if (password.value === password_confirm.value && (password.value != "")) {
-    document.querySelector('.octicon-check').classList.remove('hide')
-    document.querySelector('.octicon-alert').classList.add('hide')
-  } else {
+
+  if (password_confirm.value === "") {
     document.querySelector('.octicon-check').classList.add('hide')
-    document.querySelector('.octicon-alert').classList.remove('hide')
+    document.querySelector('.octicon-alert').classList.add('hide')
+    return
   }
 
- if (password_confirm.value === "") {
-   // return 0
-   document.querySelector('.octicon-check').classList.add('hide')
-   document.querySelector('.octicon-alert').classList.add('hide')
- }
+  if (password.value === password_confirm.value) {
+    document.querySelector('.octicon-check').classList.remove('hide')
+    document.querySelector('.octicon-alert').classList.add('hide')
+  }
 }
