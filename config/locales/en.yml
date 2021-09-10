@@ -60,6 +60,8 @@ en:
         test: "Test %{title}"
         new_question: 'Create Question'
         delete_test: 'Delete Test'
+      form_inline:
+        submit: 'Ok'
       edit:
         edit_test: 'Editing a test %{test}'
       create:

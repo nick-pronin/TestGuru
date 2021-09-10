@@ -61,6 +61,8 @@ ru:
         test: "Тест %{title}"
         new_question: 'Создать вопрос'
         delete_test: 'Удалить тест'
+      form_inline:
+        submit: 'Ok'
       edit:
         edit_test: 'Редактирование теста %{test}'
       create:
