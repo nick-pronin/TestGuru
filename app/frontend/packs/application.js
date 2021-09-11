@@ -14,6 +14,7 @@ import '../js/bootstrap_js_files.js'
 import '../js/utilites/sorting.js'
 import '../js/utilites/password_comparison.js'
 import '../js/utilites/form_inline.js'
+import '../js/utilites/progress_bar.js'
 import '../css/icons'
 
 
