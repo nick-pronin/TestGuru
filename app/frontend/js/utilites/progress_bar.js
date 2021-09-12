@@ -6,6 +6,6 @@ document.addEventListener('turbolinks:load', function () {
     let question = progressBar.dataset.currentQuestion
     let questions = progressBar.dataset.totalQuestions
 
-    progressBar.style.width = question / questions * 100 + "%"
+    progressBar.style.width = 100/questions * (question - 1) + "%"
   }
 })
