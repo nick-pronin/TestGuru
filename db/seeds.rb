@@ -15,11 +15,11 @@ games = Category.create(title: 'Games')
 
 #Tests
 
-ancient_rome = Test.create(title: 'Ancien Rome', level: 1, category_id: history.id, author_id: nick.id)
-ww2 = Test.create(title: 'WWII', level: 2, category_id: history.id, author_id: nick.id)
+ancient_rome = Test.create(title: 'Ancien Rome', level: 1, category_id: history.id, author_id: User.first)
+ww2 = Test.create(title: 'WWII', level: 2, category_id: history.id, author_id: User.first)
 
-wow = Test.create(title: 'World of Warcraft', level: 1, category_id: games.id, author_id: nick.id)
-starcraft2 = Test.create(title: 'StarCraft2', level: 2, category_id: games.id, author_id: nick.id)
+wow = Test.create(title: 'World of Warcraft', level: 1, category_id: games.id, author_id: User.first)
+starcraft2 = Test.create(title: 'StarCraft2', level: 2, category_id: games.id, author_id: User.first)
 
 #Questions
 
