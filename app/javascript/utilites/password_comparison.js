@@ -14,12 +14,12 @@ function password_comparison() {
 
   if (password_confirm.value === "") {
     document.querySelector('.octicon-check').classList.add('hide')
-    document.querySelector('.octicon-alert').classList.add('hide')
+    // document.querySelector('.octicon-alert').classList.add('hide')
     return
   }
 
   if (password.value === password_confirm.value) {
     document.querySelector('.octicon-check').classList.remove('hide')
-    document.querySelector('.octicon-alert').classList.add('hide')
+    // document.querySelector('.octicon-alert').classList.add('hide')
   }
 }

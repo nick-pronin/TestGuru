@@ -42,5 +42,10 @@
         <% end %>
       <% end %>
     </div>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <% if user_signed_in? %>
+        <button type="button" class="btn btn-dark btn-sm"><%= link_to 'Feedback', new_feedback_path %></button>
+      <% end %>
+    </div>
   </div>
 </nav>

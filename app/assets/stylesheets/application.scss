@@ -43,7 +43,7 @@ html, body {
   font-weight: 500;
 }
 
-.box input[type = "email"], .box input[type = "password"], .box input[type = "text"], .box input[type = "number"], .box select {
+.box input[type = "email"], .box input[type = "password"], .box input[type = "text"], .box input[type = "number"], .box select, .box textarea {
   border: 0;
   background: none;
   display: block;
@@ -58,7 +58,7 @@ html, body {
   transition: 0.25s;
 }
 
-.box input[type = "email"]:focus, .box input[type = "password"]:focus, .box input[type = "text"]:focus, .box input[type = "number"] {
+.box input[type = "email"]:focus, .box input[type = "password"]:focus, .box input[type = "text"]:focus, .box input[type = "number"], .box textarea:focus {
   width: 300px;
   border-color: #2ecc71;
 }
@@ -123,5 +123,15 @@ a {
 }
 
 .hide {
-  display: none;
+  visibility: hidden;
+}
+
+.octicon {
+  display: inline;
+  vertical-align: text-top;
+  fill: currentColor;
+}
+
+.pointer {
+  cursor: pointer;
 }
