@@ -2,13 +2,13 @@
 
 <%= render 'shared/errors', resource: @test %>
 
-<table class="table table-dark table-striped text-center">
+<table class="table table-dark table-striped text-center text-top">
   <thead>
   <tr>
     <th class="sort-by-title pointer" scope="col">
       <%= t('.title') %>
-      <%= octicon 'arrow-up', class: 'text-success hide' %>
-      <%= octicon 'arrow-down', class: 'text-alert hide' %>
+      <!-- <%= octicon 'arrow-up', class: 'text-success hide' %>
+      <%= octicon 'arrow-down', class: 'text-alert hide' %> -->
     </th>
     <th scope="col"><%= t('.category') %></th>
     <th scope="col"><%= t('.level') %></th>
