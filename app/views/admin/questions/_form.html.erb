@@ -1,15 +1,12 @@
-<%= form_with model: [:admin, @test, @question], local: true do |form| %>
-  <%= render 'shared/errors', resource: @question %>
+<div class="box">
+  <%= form_with model: [:admin, @test, @question], local: true do |form| %>
+    <%= render 'shared/errors', resource: @question %>
 
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_field :body, id: :question_body %>
-  </p>
+    <div class="field">
+      <!-- <%= form.label :body %><br> -->
+      <%= form.text_field :body, id: :question_body, placeholder: true %>
+    </div>
 
-  <p>
-    <%= form.label :test_id %><br>
-    <%= form.collection_select :test_id, Test.all, :id, :title, prompt: true %>
-  </p>
-
-  <p><%= form.submit %></p>
-<% end %>
+    <p><%= form.submit %></p>
+  <% end %>
+</div>
